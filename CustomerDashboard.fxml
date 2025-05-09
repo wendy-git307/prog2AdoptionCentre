@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import controller.CustomerDashboardController?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+<VBox fx:controller="controller.CustomerDashboardController"
+alignment="CENTER" styleClass="background" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1">
+        <ImageView fx:id = "bannerCat" fitWidth = "550.5" fitHeight = "250"></ImageView>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+        <Label fx:id="welcomeLabel" text="Welcome" alignment="CENTER" styleClass="heading" />
+    </VBox>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="350">
+        <ListView fx:id ="animalListToAdopt" prefWidth="550.5" prefHeight="300" />
+    </VBox>
+
+
+    <Separator/>
+
+    <HBox>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="detailsBtn" text="My Details" onAction="#handleDetails" styleClass="button" />
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="adoptBtn" text="Adopt" onAction="#handleAdopt" disable="true" styleClass="button" />
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="closeBtn" text="Close" onAction="#handleClose" styleClass="button"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

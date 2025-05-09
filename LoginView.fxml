@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import controller.LoginController?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+<VBox fx:controller="controller.LoginController" 
+    alignment="CENTER" styleClass="background" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fx:id = "bannerCat" fitWidth = "550.5" fitHeight = "250"></ImageView>
+
+    <Separator/>
+
+        <VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+            <Label fx:id="loginLabel" text="Login" styleClass="heading"/>
+        </VBox>
+        
+    <Separator/>
+
+        <GridPane fx:id="customerBox" alignment="CENTER" hgap ="5" vgap="5" prefHeight="90" > <!-- for gridpane to adjust the spacing we need to use hgap and vgap-->
+            <Label fx:id="loginUsername" text="Username:" GridPane.rowIndex ="0" GridPane.columnIndex ="0" styleClass="label"/>
+            <TextField fx:id="userName"  GridPane.rowIndex ="0" GridPane.columnIndex ="1"/>
+            <Label fx:id="loginEmail" text="Email:"  GridPane.rowIndex ="1" GridPane.columnIndex ="0" styleClass="label"/>
+            <TextField fx:id="eMail"  GridPane.rowIndex ="1" GridPane.columnIndex ="1"/>
+        </GridPane>
+
+    <Separator/>
+
+    <GridPane fx:id="managerBox" alignment="CENTER"  hgap ="5" vgap="5" prefHeight="60"  >
+        <Label fx:id="loginManager" text="Manager ID:" GridPane.rowIndex ="0" GridPane.columnIndex ="0" styleClass="label" />
+        <TextField fx:id = "managerID" GridPane.rowIndex ="0" GridPane.columnIndex ="1" />
+    </GridPane>
+
+    <HBox >
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="loginBtn" text="Login" onAction="#handleLogin" disable="true" styleClass="button"/>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="exitBtn" text="Exit" onAction="#handleExit" styleClass="button"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+
+</VBox>

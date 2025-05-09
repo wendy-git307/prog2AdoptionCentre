@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.ErrorController"
+alignment="CENTER" styleClass="background" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <ImageView fx:id="bannerError" fitWidth="550.0" fitHeight="250">
+    </ImageView>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+        <Label fx:id="errorLabel" styleClass="error"  />
+    </VBox>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+        <Label fx:id="errorMessage" styleClass="label"/>
+    </VBox>
+
+    <Separator/>
+
+    <HBox>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="closeBtn" text="Close" onAction="#handleClose" styleClass="button"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@/view/style.css"/>
+    </stylesheets>
+</VBox>

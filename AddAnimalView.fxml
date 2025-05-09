@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.stage.*?>
+
+<VBox fx:controller= "controller.AddAnimalController"
+    alignment="CENTER" styleClass="background" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fx:id = "bannerCat" fitWidth = "550.0" fitHeight = "250">
+    </ImageView>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+        <Label fx:id= "addAnimal" text="Add Animal" styleClass="heading"/>
+    </VBox>
+
+    <Separator/>
+
+    <GridPane alignment="CENTER" hgap ="5" vgap="5" prefHeight="90">
+        <Label fx:id="typeLabel" text="Type:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="label"/>
+        <ChoiceBox fx:id="choiceBox" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="choice-box"/> <!-- default style class for choice box in JavaFX-->
+        <Label fx:id="nameLabel" text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="label"/>
+        <TextField fx:id='nameAnimal' GridPane.rowIndex="1" GridPane.columnIndex="1" />
+        <Label fx:id="ageLabel" text="Age:" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="label" />
+            <TextField fx:id="ageAnimal" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="addBtn" text="Add" onAction="#handleAddAnimal" disable = "true" styleClass="button"/>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="closeBtn" text="Close" onAction="#handleClose" styleClass="button"/>
+    </HBox>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
