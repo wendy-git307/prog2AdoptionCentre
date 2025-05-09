@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox fx:controller= "controller.ManagerDashboardController"
+alignment="CENTER" styleClass="background" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1">
+<ImageView fx:id = "bannerCat" fitWidth = "550.5" fitHeight = "250"></ImageView>
+
+<Separator/>
+
+<VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+    <Label fx:id="managerDashboard" text="Manager Dashboard" alignment="CENTER" styleClass="heading" />
+</VBox>
+
+<Separator/>
+
+<VBox alignment="CENTER" spacing="10" prefHeight="480">
+    <HBox >
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="allBtn" text="All" styleClass="filter"/>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="catBtn" text="Cat" styleClass="filter"/>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="dogBtn" text="Dog" styleClass="filter"/>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="rabbitBtn" text="Rabbit" styleClass="filter"/>
+    </HBox>
+    <StackPane>
+        <TableView fx:id="allAnimalsTable" visible="true"/>
+        <TableView fx:id="catTypes" visible="false"/>
+        <TableView fx:id="dogTypes" visible="false"/>
+        <TableView fx:id="rabbitTypes" visible="false"/>
+    </StackPane>
+</VBox>
+
+<Separator/>
+
+<HBox>
+    <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="userListBtn" text="User List" onAction="#handleUserList" styleClass="button" />
+    <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="addBtn" text="Add" onAction="#handleAdd" styleClass="button" />
+    <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="removeBtn" text="Remove" onAction="#handleRemove" disable="true" styleClass="button"/>
+    <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="closeBtn" text="Close" onAction="#handleClose" styleClass="button"/>
+</HBox>
+
+<stylesheets>
+    <URL value="@style.css"/>
+</stylesheets>
+</VBox>

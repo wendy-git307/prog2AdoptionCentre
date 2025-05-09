@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox fx:controller = "controller.DetailsController"
+alignment="CENTER" styleClass="background" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" >
+<ImageView fx:id = "bannerCat" fitWidth = "550.5" fitHeight = "250"></ImageView>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+        <Label fx:id="nameCustomer" alignment="CENTER" styleClass="heading" />
+    </VBox>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="50">
+        <Label fx:id="animalAdopted" Text="Adopted Animals" alignment="CENTER" styleClass="label" />
+    </VBox>
+
+    <Separator/>
+
+    <VBox alignment ="CENTER" spacing="10" prefHeight ="350">
+        <ListView fx:id ="adoptedAnimalList" prefWidth="550.5" prefHeight="300"> 
+            <placeholder>
+                <Text text = "No animals adopted"/>
+            </placeholder>
+        </ListView>
+    </VBox>
+        
+    <Separator/>
+
+    <HBox>
+        <Button HBox.hgrow="ALWAYS" maxWidth="Infinity" fx:id="closeBtn" text="Close" onAction="#handleClose" styleClass="button"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
